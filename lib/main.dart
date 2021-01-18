@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/widgets/logo.widget.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,27 +24,7 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
-      body: ListView(children: <Widget>[
-        SizedBox(
-          height: 20,
-        ),
-        Image.asset(
-          "assets/images/aog-white.png",
-          height: 60,
-        ),
-        SizedBox(
-          height: 10,
-        ),
-        Text(
-          "Alcool ou Gasolina",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontFamily: "Big Shoulders Display",
-          ),
-          textAlign: TextAlign.center,
-        )
-      ]),
+      body: ListView(children: <Widget>[Logo()]),
     );
   }
 }
