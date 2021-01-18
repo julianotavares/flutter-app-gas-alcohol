@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
 }
 
 class Homepage extends StatelessWidget {
-  var _gasCtrl = new MoneyMaskedTextController()
+  var _gasCtrl = new MoneyMaskedTextController();
+  var _alcCtrl = new MoneyMaskedTextController();
 
   @override
   Widget build(BuildContext context) {
@@ -30,8 +31,14 @@ class Homepage extends StatelessWidget {
       backgroundColor: Theme.of(context).primaryColor,
       body: ListView(children: <Widget>[
         Logo(),
-        Input(),
-       
+        Input(
+          ctrl: _gasCtrl,
+          label: "Gasolina",
+        ),
+        Input(
+          ctrl: _alcCtrl,
+          label: "Álcool",
+        ),
       ]),
     );
   }

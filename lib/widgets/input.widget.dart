@@ -18,7 +18,7 @@ class Input extends StatelessWidget {
         Container(
           width: 100,
           alignment: Alignment.centerRight,
-          child: Text("Álcool",
+          child: Text(label,
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 35,
@@ -30,7 +30,7 @@ class Input extends StatelessWidget {
         ),
         Expanded(
           child: TextFormField(
-              controller: _gasCtrl,
+              controller: ctrl,
               keyboardType: TextInputType.number,
               style: TextStyle(
                 color: Colors.white,
